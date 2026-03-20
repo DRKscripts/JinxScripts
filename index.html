@@ -101,10 +101,23 @@
             position: relative;
         }
 
-        .tutorial-btn {
+        .vng-btn {
             background: transparent;
-            border: 1px solid var(--yellow);
-            color: var(--yellow);
+            border: 1px solid #00ff9d;
+            color: #00ff9d;
+            padding: 10px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .ios-btn {
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
             padding: 10px 30px;
             font-family: 'Orbitron', sans-serif;
             font-weight: bold;
@@ -121,10 +134,17 @@
             transform: skew(-10deg) scale(1.1);
         }
 
-        .tutorial-btn:hover {
-            background: var(--yellow);
+        .vng-btn:hover, .vng-btn.active {
+            background: #00ff9d;
             color: var(--bg);
-            box-shadow: 0 0 30px var(--yellow);
+            box-shadow: 0 0 30px #00ff9d;
+            transform: skew(-10deg) scale(1.1);
+        }
+
+        .ios-btn:hover, .ios-btn.active {
+            background: #ffffff;
+            color: var(--bg);
+            box-shadow: 0 0 30px #ffffff;
             transform: skew(-10deg) scale(1.1);
         }
 
@@ -183,6 +203,14 @@
             transform: translateY(20px);
         }
 
+        .vng-card {
+            border: 1px solid #00ff9d;
+        }
+
+        .ios-card {
+            border: 1px solid #ffffff;
+        }
+
         .cyber-card:nth-child(1) { animation-delay: 0.1s; }
         .cyber-card:nth-child(2) { animation-delay: 0.2s; }
         .cyber-card:nth-child(3) { animation-delay: 0.3s; }
@@ -193,8 +221,6 @@
         .cyber-card:nth-child(8) { animation-delay: 0.8s; }
         .cyber-card:nth-child(9) { animation-delay: 0.9s; }
         .cyber-card:nth-child(10) { animation-delay: 1.0s; }
-        .cyber-card:nth-child(11) { animation-delay: 1.1s; }
-        .cyber-card:nth-child(12) { animation-delay: 1.2s; }
 
         @keyframes cardAppear {
             to {
@@ -212,11 +238,31 @@
             opacity: 0.5;
         }
 
+        .vng-card::before {
+            color: #00ff9d;
+        }
+
+        .ios-card::before {
+            color: #ffffff;
+        }
+
         .cyber-card:hover {
             border-color: var(--magenta);
             background: rgba(255, 0, 255, 0.05);
             box-shadow: inset 0 0 20px rgba(255, 0, 255, 0.2);
             transform: translateY(-5px);
+        }
+
+        .vng-card:hover {
+            border-color: #00ff9d;
+            background: rgba(0, 255, 157, 0.05);
+            box-shadow: inset 0 0 20px rgba(0, 255, 157, 0.2);
+        }
+
+        .ios-card:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
         .cyber-card img {
@@ -238,6 +284,14 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             font-size: 1.4rem;
+        }
+
+        .vng-card h3 {
+            color: #00ff9d;
+        }
+
+        .ios-card h3 {
+            color: #ffffff;
         }
 
         .cyber-card p {
@@ -284,6 +338,29 @@
             left: 100%;
         }
 
+        .badge-arch {
+            display: inline-block;
+            background: rgba(0, 242, 255, 0.2);
+            border: 1px solid var(--cyan);
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 3px;
+            margin-left: 10px;
+            font-family: monospace;
+        }
+
+        .vng-badge {
+            border-color: #00ff9d;
+            color: #00ff9d;
+            background: rgba(0, 255, 157, 0.2);
+        }
+
+        .ios-badge {
+            border-color: #ffffff;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
         footer {
             text-align: center;
             padding: 50px;
@@ -328,80 +405,131 @@
 
     <nav class="nav-cyber">
         <button class="cyber-btn active" onclick="showTab(event, 'executors')">Executores</button>
-        <button class="tutorial-btn" onclick="window.open('https://youtu.be/Sb-R8FKdEkw?si=Ioy7F-KmbQljQZRI', '_blank')">Tutorial Encurtador</button>
+        <button class="vng-btn" onclick="showTab(event, 'vng')">🇻🇳 VNG Edition</button>
+        <button class="ios-btn" onclick="showTab(event, 'ios')">🍎 iOS / IPA</button>
         <button class="cyber-btn" onclick="showTab(event, 'scripts')">Scripts</button>
-        <button class="cyber-btn" onclick="showTab(event, 'capcut')">CapCut</button>
     </nav>
 
     <div class="container">
-        <!-- SEÇÃO EXECUTORES -->
+        <!-- SEÇÃO EXECUTORES (ANDROID/APK) -->
         <section id="executors" class="section active">
             <div class="grid">
+                <!-- PUNKX 64Bits FIXED -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX Executor" />
+                    <h3>PunkX 64Bits <span class="badge-arch">FIXED</span></h3>
+                    <p>Executor 64Bits com correções e estabilidade aprimorada para scripts avançados.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=556" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- PUNKX 32Bits FIXED -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX Executor" />
+                    <h3>PunkX 32Bits <span class="badge-arch">FIXED</span></h3>
+                    <p>Executor 32Bits com correções e estabilidade aprimorada para scripts avançados.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=553" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- NEUTRON 64Bits -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron Executor" />
+                    <h3>Neutron 64Bits</h3>
+                    <p>Executor Neutron com suporte otimizado para scripts e desempenho robusto.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=538" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- NEUTRON 32Bits -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron Executor" />
+                    <h3>Neutron 32Bits</h3>
+                    <p>Executor Neutron com suporte otimizado para scripts e desempenho robusto.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=535" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- DELTA Android -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Executor" />
-                    <h3>Delta Executor</h3>
-                    <p>Executor confiável com suporte para scripts avançados e interface otimizada.</p>
-                    <a href="https://topjogosvip.online/?page_id=8655" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <h3>Delta Android <span class="badge-arch">APK</span></h3>
+                    <p>Executor Delta para Android com versão atualizada v2.711.876.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=526" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+                <!-- ARCEUS X NEO -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/7rhdpVq.png" alt="Ronix Executor" />
-                    <h3>Ronix Executor</h3>
-                    <p>Executor atualizado com suporte robusto para scripts e desempenho otimizado.</p>
-                    <a href="https://topjogosvip.online/?page_id=8626" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/BTiqje0.png" alt="KRNL" />
-                    <h3>KRNL Executor</h3>
-                    <p>Popular executor gratuito com suporte para vários jogos.</p>
-                    <a href="https://topjogosvip.online/?p=4216" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/V6uJTQc.png" alt="FLUXUS" />
-                    <h3>Fluxus Android</h3>
-                    <p>Executor .lua para dispositivos móveis com interface simples.</p>
-                    <a href="https://www.mediafire.com/file/sk5cjcm6w027hbj/FLUXUSZ_64B_DESTRUA-SE_ROBLOX.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/p19OKpm.png" alt="Codex Executor" />
-                    <h3>Codex Executor</h3>
-                    <p>Executor moderno com suporte a múltiplas APIs e atualizações constantes.</p>
-                    <a href="https://topjogosvip.online/?p=6048" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus Executor" />
-                    <h3>Arceus X</h3>
+                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus X NEO" />
+                    <h3>Arceus X NEO <span class="badge-arch">v2.1.2</span></h3>
                     <p>Um dos executores mais usados em dispositivos móveis para scripts .lua.</p>
-                    <a href="https://topjogosvip.online/?page_id=8586" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://mobile2.hubsocial.chat/?p=520" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+                <!-- VEGA X -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/BKx2T85.png" alt="Vega X" />
-                    <h3>Vega X</h3>
+                    <h3>Vega X <span class="badge-arch">APK</span></h3>
                     <p>Executor com interface moderna e recursos avançados para scripts.</p>
-                    <a href="https://topjogosvip.online/?page_id=8664" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://mobile2.hubsocial.chat/?p=517" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/6LsHhye.png" alt="Evon Executor" />
-                    <h3>Evon Executor</h3>
-                    <p>Executor poderoso com interface intuitiva e suporte a scripts avançados.</p>
-                    <a href="https://topjogosvip.online/?p=4544" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/K1OTnQ8.png" alt="Frostware Executor" />
-                    <h3>Frostware Executor</h3>
-                    <p>Executor estável com recursos exclusivos para melhor desempenho.</p>
-                    <a href="https://www.mediafire.com/file/l3re2sxk8rxa6un/Frostware+Gen-X+V3.7.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
+                <!-- TRIGON -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/TEYdM8i.png" alt="Trigon Executor" />
-                    <h3>Trigon Executor</h3>
+                    <h3>Trigon <span class="badge-arch">v2.711.876</span></h3>
                     <p>Executor avançado com suporte para scripts complexos e interface amigável.</p>
-                    <a href="https://topjogosvip.online/?page_id=8595" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://mobile2.hubsocial.chat/?p=514" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+                <!-- RONIX 32Bits EMU FIX -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/8BrVQUN.png" alt="Cryptic Executor" />
-                    <h3>Cryptic Executor</h3>
-                    <p>Executor seguro com recursos otimizados para execução de scripts em vários jogos.</p>
-                    <a href="https://topjogosvip.online/?page_id=8632" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/7rhdpVq.png" alt="Ronix Executor" />
+                    <h3>Ronix 32Bits <span class="badge-arch">EMU FIX</span></h3>
+                    <p>Executor Ronix com correções para emuladores, versão 32Bits.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=511" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO VNG EDITION (Vietnam) -->
+        <section id="vng" class="section">
+            <div class="grid">
+                <!-- PUNKX VNG 64Bits -->
+                <div class="cyber-card vng-card">
+                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX VNG" />
+                    <h3 style="color: #00ff9d;">PunkX VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do PunkX para arquitetura 64Bits. Otimizado para servidores asiáticos.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=544" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- PUNKX VNG 32Bits -->
+                <div class="cyber-card vng-card">
+                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX VNG" />
+                    <h3 style="color: #00ff9d;">PunkX VNG 32Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do PunkX para arquitetura 32Bits. Otimizado para servidores asiáticos.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=541" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- NEUTRON VNG 64Bits -->
+                <div class="cyber-card vng-card">
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron VNG" />
+                    <h3 style="color: #00ff9d;">Neutron VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do Neutron para arquitetura 64Bits. Performance otimizada.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=532" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- NEUTRON VNG 32Bits -->
+                <div class="cyber-card vng-card">
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron VNG" />
+                    <h3 style="color: #00ff9d;">Neutron VNG 32Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do Neutron para arquitetura 32Bits. Performance otimizada.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=529" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO iOS / IPA -->
+        <section id="ios" class="section">
+            <div class="grid">
+                <!-- DELTA iOS -->
+                <div class="cyber-card ios-card">
+                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta iOS" />
+                    <h3 style="color: #ffffff;">Delta iOS <span class="badge-arch ios-badge">IPA</span></h3>
+                    <p>Executor Delta para dispositivos iOS. Versão v2.711.871.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=523" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+                <!-- RONIX iOS -->
+                <div class="cyber-card ios-card">
+                    <img src="https://i.imgur.com/7rhdpVq.png" alt="Ronix iOS" />
+                    <h3 style="color: #ffffff;">Ronix iOS <span class="badge-arch ios-badge">IPA</span></h3>
+                    <p>Executor Ronix para dispositivos iOS. Versão v2.710.706-3.</p>
+                    <a href="https://mobile2.hubsocial.chat/?p=508" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
             </div>
         </section>
@@ -453,18 +581,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- SEÇÃO CAPCUT -->
-        <section id="capcut" class="section">
-            <div class="grid">
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/ZKzUlVM.png" alt="CapCut Pro" />
-                    <h3>CapCut Pro Mod</h3>
-                    <p>Versão premium do CapCut com todos os recursos desbloqueados para edições profissionais.</p>
-                    <a href="https://topjogosvip.online/?p=4596" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer>
@@ -475,12 +591,10 @@
     <script>
         function showTab(e, id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.cyber-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.cyber-btn, .vng-btn, .ios-btn').forEach(b => b.classList.remove('active'));
             
             document.getElementById(id).classList.add('active');
-            if (e.currentTarget.classList.contains('cyber-btn')) {
-                e.currentTarget.classList.add('active');
-            }
+            e.currentTarget.classList.add('active');
         }
 
         // Ativar cards com animação
