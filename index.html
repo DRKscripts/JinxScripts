@@ -31,7 +31,6 @@
             overflow-x: hidden;
         }
 
-        /* Efeito de linhas de monitor (Scanlines) */
         body::before {
             content: " ";
             position: fixed;
@@ -43,7 +42,6 @@
             pointer-events: none;
         }
 
-        /* Header e Logo */
         header {
             text-align: center;
             padding: 60px 20px;
@@ -79,7 +77,6 @@
             100% { transform: translate(0); }
         }
 
-        /* Navbar Cyber */
         .nav-cyber {
             display: flex;
             justify-content: center;
@@ -148,7 +145,6 @@
             transform: skew(-10deg) scale(1.1);
         }
 
-        /* Social Links */
         .social-links {
             display: flex;
             justify-content: center;
@@ -174,7 +170,6 @@
             background: rgba(255, 0, 255, 0.2);
         }
 
-        /* Grid de Cards */
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -190,7 +185,6 @@
             gap: 30px;
         }
 
-        /* Card Estilo HUD */
         .cyber-card {
             background: var(--card-bg);
             border: 1px solid var(--cyan);
@@ -203,13 +197,8 @@
             transform: translateY(20px);
         }
 
-        .vng-card {
-            border: 1px solid #00ff9d;
-        }
-
-        .ios-card {
-            border: 1px solid #ffffff;
-        }
+        .vng-card { border: 1px solid #00ff9d; }
+        .ios-card { border: 1px solid #ffffff; }
 
         .cyber-card:nth-child(1) { animation-delay: 0.1s; }
         .cyber-card:nth-child(2) { animation-delay: 0.2s; }
@@ -223,10 +212,7 @@
         .cyber-card:nth-child(10) { animation-delay: 1.0s; }
 
         @keyframes cardAppear {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .cyber-card::before {
@@ -238,13 +224,8 @@
             opacity: 0.5;
         }
 
-        .vng-card::before {
-            color: #00ff9d;
-        }
-
-        .ios-card::before {
-            color: #ffffff;
-        }
+        .vng-card::before { color: #00ff9d; }
+        .ios-card::before { color: #ffffff; }
 
         .cyber-card:hover {
             border-color: var(--magenta);
@@ -274,9 +255,7 @@
             transition: transform 0.3s;
         }
 
-        .cyber-card:hover img {
-            transform: scale(1.05);
-        }
+        .cyber-card:hover img { transform: scale(1.05); }
 
         .cyber-card h3 {
             font-family: 'Orbitron', sans-serif;
@@ -286,13 +265,8 @@
             font-size: 1.4rem;
         }
 
-        .vng-card h3 {
-            color: #00ff9d;
-        }
-
-        .ios-card h3 {
-            color: #ffffff;
-        }
+        .vng-card h3 { color: #00ff9d; }
+        .ios-card h3 { color: #ffffff; }
 
         .cyber-card p {
             font-size: 0.9rem;
@@ -334,9 +308,7 @@
             box-shadow: 0 0 20px var(--magenta);
         }
 
-        .download-btn:hover::before {
-            left: 100%;
-        }
+        .download-btn:hover::before { left: 100%; }
 
         .badge-arch {
             display: inline-block;
@@ -411,112 +383,121 @@
     </nav>
 
     <div class="container">
-        <!-- SEÇÃO EXECUTORES (ANDROID/APK) -->
+
+        <!-- SEÇÃO EXECUTORES (ANDROID/PC) -->
         <section id="executors" class="section active">
             <div class="grid">
-                <!-- PUNKX 64Bits FIXED -->
+
+                <!-- CODEX ANDROID -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX Executor" />
-                    <h3>PunkX 64Bits <span class="badge-arch">FIXED</span></h3>
-                    <p>Executor 64Bits com correções e estabilidade aprimorada para scripts avançados.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=556" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Codex Android" />
+                    <h3>Codex <span class="badge-arch">ANDROID</span></h3>
+                    <p>Executor Codex para Android. Versão V2.714 com suporte aprimorado para scripts.</p>
+                    <a href="https://www.mediafire.com/file/hqxi1bmobg8qa6e/CODEX_V2.714.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- PUNKX 32Bits FIXED -->
+
+                <!-- DELTA ANDROID -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX Executor" />
-                    <h3>PunkX 32Bits <span class="badge-arch">FIXED</span></h3>
-                    <p>Executor 32Bits com correções e estabilidade aprimorada para scripts avançados.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=553" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <!-- NEUTRON 64Bits -->
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron Executor" />
-                    <h3>Neutron 64Bits</h3>
-                    <p>Executor Neutron com suporte otimizado para scripts e desempenho robusto.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=538" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <!-- NEUTRON 32Bits -->
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron Executor" />
-                    <h3>Neutron 32Bits</h3>
-                    <p>Executor Neutron com suporte otimizado para scripts e desempenho robusto.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=535" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-                <!-- DELTA Android -->
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Executor" />
+                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Android" />
                     <h3>Delta Android <span class="badge-arch">APK</span></h3>
-                    <p>Executor Delta para Android com versão atualizada v2.711.876.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=526" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <p>Executor Delta para Android. Versão atualizada v2.714.1091.</p>
+                    <a href="https://www.mediafire.com/file/os4s0q7vgifg3kk/Delta-2.714.1091.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+
                 <!-- ARCEUS X NEO -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus X NEO" />
-                    <h3>Arceus X NEO <span class="badge-arch">v2.1.2</span></h3>
+                    <h3>Arceus X NEO <span class="badge-arch">APK</span></h3>
                     <p>Um dos executores mais usados em dispositivos móveis para scripts .lua.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=520" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://www.mediafire.com/file/8w3sx1jtm582frb/Arceus_x_Neo_.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- VEGA X -->
+
+                <!-- VEGA X 64B -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/BKx2T85.png" alt="Vega X" />
-                    <h3>Vega X <span class="badge-arch">APK</span></h3>
-                    <p>Executor com interface moderna e recursos avançados para scripts.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=517" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <h3>Vega X <span class="badge-arch">64B</span></h3>
+                    <p>Executor com interface moderna e recursos avançados para scripts. Arquitetura 64Bits.</p>
+                    <a href="https://www.mediafire.com/file/72nc9ftjn4byeep/Vega.X.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- TRIGON -->
+
+                <!-- TRIGON 64B -->
                 <div class="cyber-card">
                     <img src="https://i.imgur.com/TEYdM8i.png" alt="Trigon Executor" />
-                    <h3>Trigon <span class="badge-arch">v2.711.876</span></h3>
-                    <p>Executor avançado com suporte para scripts complexos e interface amigável.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=514" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <h3>Trigon <span class="badge-arch">64B</span></h3>
+                    <p>Executor avançado com suporte para scripts complexos. Versão v2.713.</p>
+                    <a href="https://www.mediafire.com/file/ia903gj0vdb133c/Trigon_v2.713.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- RONIX 32Bits EMU FIX -->
+
+                <!-- FLUXUZ WINDOWS -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/7rhdpVq.png" alt="Ronix Executor" />
-                    <h3>Ronix 32Bits <span class="badge-arch">EMU FIX</span></h3>
-                    <p>Executor Ronix com correções para emuladores, versão 32Bits.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=511" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="FluxuzZ Windows" />
+                    <h3>FluxuzZ <span class="badge-arch">WINDOWS</span></h3>
+                    <p>Executor FluxuzZ para Windows. Versão 1.1.6 com performance aprimorada para PC.</p>
+                    <a href="https://www.mediafire.com/file/u8o5jwj8reaetbk/FluxusZ_Windows_1.1.6_25789050.exe/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+
+                <!-- VELOCITY WINDOWS -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/BKx2T85.png" alt="Velocity Windows" />
+                    <h3>Velocity <span class="badge-arch">WINDOWS</span></h3>
+                    <p>Executor Velocity para Windows com suporte completo a scripts avançados.</p>
+                    <a href="https://www.mediafire.com/file/v7gc34fanrt5w7b/Velocity.zip/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- DELTA LITE SEM SKIN 64B -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Lite Sem Skin" />
+                    <h3>Delta Lite <span class="badge-arch">SEM SKIN</span></h3>
+                    <p>Versão leve do Delta sem skin para arquitetura 64Bits. Mais performance, menos peso.</p>
+                    <a href="https://www.mediafire.com/file/itm5pkpy3bfliks/DELTA_LITE_SEM_SKIN.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- DELTA LITE COM SKIN 64B -->
+                <div class="cyber-card">
+                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Lite Com Skin" />
+                    <h3>Delta Lite <span class="badge-arch">COM SKIN</span></h3>
+                    <p>Versão leve do Delta com skin para arquitetura 64Bits. Visual personalizado e leve.</p>
+                    <a href="https://www.mediafire.com/file/80gox1qwax1uy59/DELTA_LITE_COM_SKIN.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
             </div>
         </section>
 
-        <!-- SEÇÃO VNG EDITION (Vietnam) -->
+        <!-- SEÇÃO VNG EDITION -->
         <section id="vng" class="section">
             <div class="grid">
-                <!-- PUNKX VNG 64Bits -->
+
+                <!-- DELTA VNG OFC 64B -->
                 <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX VNG" />
-                    <h3 style="color: #00ff9d;">PunkX VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão Vietnam do PunkX para arquitetura 64Bits. Otimizado para servidores asiáticos.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=544" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta VNG" />
+                    <h3 style="color: #00ff9d;">Delta VNG OFC 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão oficial Vietnam do Delta para arquitetura 64Bits. Otimizado para servidores asiáticos. v2.711.871.</p>
+                    <a href="https://www.mediafire.com/file/99bfiy23cfh3wmb/Delta_vng-2.711.871.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- PUNKX VNG 32Bits -->
+
+                <!-- ARCEUS X NEO VNG 64B -->
                 <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/BTiqje0.png" alt="PunkX VNG" />
-                    <h3 style="color: #00ff9d;">PunkX VNG 32Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão Vietnam do PunkX para arquitetura 32Bits. Otimizado para servidores asiáticos.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=541" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus X NEO VNG" />
+                    <h3 style="color: #00ff9d;">Arceus X NEO VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do Arceus X NEO para arquitetura 64Bits. Compatível com servidores asiáticos.</p>
+                    <a href="https://www.mediafire.com/file/8d1qrhckssh9ult/Arceus_x_vng_neo.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- NEUTRON VNG 64Bits -->
+
+                <!-- ROBLOX VNG LITE 64B -->
                 <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron VNG" />
-                    <h3 style="color: #00ff9d;">Neutron VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão Vietnam do Neutron para arquitetura 64Bits. Performance otimizada.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=532" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Roblox VNG Lite" />
+                    <h3 style="color: #00ff9d;">Roblox VNG Super Lite 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão super leve do Roblox VNG para arquitetura 64Bits. Ideal para dispositivos com menos recursos.</p>
+                    <a href="https://www.mediafire.com/file/h4e8b45zqag6x0z/ROBLOX_VNG_SUPER_LITE_64B.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
-                <!-- NEUTRON VNG 32Bits -->
-                <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Neutron VNG" />
-                    <h3 style="color: #00ff9d;">Neutron VNG 32Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão Vietnam do Neutron para arquitetura 32Bits. Performance otimizada.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=529" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
+
             </div>
         </section>
 
         <!-- SEÇÃO iOS / IPA -->
         <section id="ios" class="section">
             <div class="grid">
+
                 <!-- DELTA iOS -->
                 <div class="cyber-card ios-card">
                     <img src="https://i.imgur.com/K1YVVbH.png" alt="Delta iOS" />
@@ -524,6 +505,7 @@
                     <p>Executor Delta para dispositivos iOS. Versão v2.711.871.</p>
                     <a href="https://mobile2.hubsocial.chat/?p=523" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+
                 <!-- RONIX iOS -->
                 <div class="cyber-card ios-card">
                     <img src="https://i.imgur.com/D48xTEr.png" alt="Ronix iOS" />
@@ -531,6 +513,7 @@
                     <p>Executor Ronix para dispositivos iOS. Versão v2.710.706-3.</p>
                     <a href="https://mobile2.hubsocial.chat/?p=508" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
+
             </div>
         </section>
 
@@ -557,6 +540,7 @@
                 </div>
             </div>
         </section>
+
     </div>
 
     <footer>
@@ -568,12 +552,10 @@
         function showTab(e, id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.cyber-btn, .vng-btn, .ios-btn').forEach(b => b.classList.remove('active'));
-            
             document.getElementById(id).classList.add('active');
             e.currentTarget.classList.add('active');
         }
 
-        // Ativar cards com animação
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.cyber-card');
             cards.forEach(card => {
