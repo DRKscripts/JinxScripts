@@ -130,6 +130,19 @@
             position: relative;
         }
 
+        .pc-btn {
+            background: transparent;
+            border: 1px solid #ff8800;
+            color: #ff8800;
+            padding: 10px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: all 0.3s;
+            position: relative;
+        }
+
         .cyber-btn:hover, .cyber-btn.active {
             background: var(--cyan);
             color: var(--bg);
@@ -148,6 +161,13 @@
             background: #ffffff;
             color: var(--bg);
             box-shadow: 0 0 30px #ffffff;
+            transform: skew(-10deg) scale(1.1);
+        }
+
+        .pc-btn:hover, .pc-btn.active {
+            background: #ff8800;
+            color: var(--bg);
+            box-shadow: 0 0 30px #ff8800;
             transform: skew(-10deg) scale(1.1);
         }
 
@@ -205,6 +225,7 @@
 
         .vng-card { border: 1px solid #00ff9d; }
         .ios-card { border: 1px solid #ffffff; }
+        .pc-card { border: 1px solid #ff8800; }
 
         .cyber-card:nth-child(1) { animation-delay: 0.05s; }
         .cyber-card:nth-child(2) { animation-delay: 0.1s; }
@@ -238,6 +259,7 @@
 
         .vng-card::before { color: #00ff9d; }
         .ios-card::before { color: #ffffff; }
+        .pc-card::before { color: #ff8800; }
 
         .cyber-card:hover {
             border-color: var(--magenta);
@@ -258,16 +280,11 @@
             box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
-        .cyber-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border: 1px solid rgba(0, 242, 255, 0.3);
-            margin-bottom: 15px;
-            transition: transform 0.3s;
+        .pc-card:hover {
+            border-color: #ff8800;
+            background: rgba(255, 136, 0, 0.05);
+            box-shadow: inset 0 0 20px rgba(255, 136, 0, 0.2);
         }
-
-        .cyber-card:hover img { transform: scale(1.05); }
 
         .cyber-card h3 {
             font-family: 'Orbitron', sans-serif;
@@ -279,6 +296,7 @@
 
         .vng-card h3 { color: #00ff9d; }
         .ios-card h3 { color: #ffffff; }
+        .pc-card h3 { color: #ff8800; }
 
         .cyber-card p {
             font-size: 0.9rem;
@@ -345,6 +363,12 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
+        .pc-badge {
+            border-color: #ff8800;
+            color: #ff8800;
+            background: rgba(255, 136, 0, 0.2);
+        }
+
         .updated-badge {
             display: inline-block;
             background: rgba(252, 238, 10, 0.15);
@@ -401,45 +425,42 @@
     </header>
 
     <nav class="nav-cyber">
-        <button class="cyber-btn active" onclick="showTab(event, 'executors')">Executores</button>
-        <button class="vng-btn" onclick="showTab(event, 'vng')">🇻🇳 VNG Edition</button>
-        <button class="ios-btn" onclick="showTab(event, 'ios')">🍎 iOS / IPA</button>
-        <button class="cyber-btn" onclick="showTab(event, 'scripts')">Scripts</button>
+        <button class="cyber-btn active" onclick="showTab(event, 'executors')">🤖 Android</button>
+        <button class="pc-btn" onclick="showTab(event, 'pc')">💻 PC</button>
+        <button class="ios-btn" onclick="showTab(event, 'ios')">🍎 iOS</button>
+        <button class="vng-btn" onclick="showTab(event, 'vng')">🇻🇳 VNG</button>
+        <button class="cyber-btn" onclick="showTab(event, 'scripts')">📜 Scripts</button>
     </nav>
 
     <div class="container">
 
-        <!-- SEÇÃO EXECUTORES (ANDROID/PC) -->
+        <!-- SEÇÃO ANDROID -->
         <section id="executors" class="section active">
             <div class="grid">
 
                 <!-- CODEX ANDROID -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Codex Android" loading="lazy" />
                     <h3>Codex <span class="badge-arch">ANDROID</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Executor Codex para Android. Link atualizado.</p>
-                    <a href="https://biplap3.hubsocial.chat/?p=869" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://biplap3.hubsocial.chat/?p=998" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
                 <!-- DELTA ANDROID -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Android" loading="lazy" />
                     <h3>Delta Android <span class="badge-arch">APK</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Executor Delta para Android. Link atualizado.</p>
-                    <a href="https://biplap3.hubsocial.chat/?p=863" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://biplap3.hubsocial.chat/?p=1001" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
                 <!-- ARCEUS X NEO -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus X NEO" loading="lazy" />
                     <h3>Arceus X NEO <span class="badge-arch">ANDROID</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Um dos executores mais usados em dispositivos móveis para scripts .lua.</p>
-                    <a href="https://biplap3.hubsocial.chat/?p=866" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://biplap3.hubsocial.chat/?p=995" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
                 <!-- VEGA X 64B -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/BKx2T85.png" alt="Vega X" loading="lazy" />
                     <h3>Vega X <span class="badge-arch">64B</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Executor com interface moderna e recursos avançados para scripts. Arquitetura 64Bits.</p>
                     <a href="https://biplap3.hubsocial.chat/?p=881" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
@@ -447,31 +468,13 @@
 
                 <!-- TRIGON 64B -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Trigon Executor" loading="lazy" />
                     <h3>Trigon <span class="badge-arch">64B</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Executor avançado com suporte para scripts complexos.</p>
                     <a href="https://biplap3.hubsocial.chat/?p=884" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
-                <!-- FLUXUZ WINDOWS -->
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="FluxuzZ Windows" loading="lazy" />
-                    <h3>FluxuzZ <span class="badge-arch">WINDOWS</span></h3>
-                    <p>Executor FluxuzZ para Windows. Versão 1.1.6 com performance aprimorada para PC.</p>
-                    <a href="https://www.mediafire.com/file/u8o5jwj8reaetbk/FluxusZ_Windows_1.1.6_25789050.exe/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-
-                <!-- VELOCITY WINDOWS -->
-                <div class="cyber-card">
-                    <img src="https://i.imgur.com/BKx2T85.png" alt="Velocity Windows" loading="lazy" />
-                    <h3>Velocity <span class="badge-arch">WINDOWS</span></h3>
-                    <p>Executor Velocity para Windows com suporte completo a scripts avançados.</p>
-                    <a href="https://www.mediafire.com/file/v7gc34fanrt5w7b/Velocity.zip/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
-                </div>
-
                 <!-- DELTA SUPER LITE 64B -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Super Lite 64B" loading="lazy" />
                     <h3>Delta Super Lite <span class="badge-arch">64B</span></h3>
                     <p>Versão super leve do Delta para arquitetura 64Bits. Mais performance, menos peso.</p>
                     <a href="https://www.mediafire.com/file/3z831n2sjo0ccxn/Delta_Super_Lite_v724_64B.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
@@ -479,7 +482,6 @@
 
                 <!-- DELTA SUPER LITE 32B -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta Super Lite 32B" loading="lazy" />
                     <h3>Delta Super Lite <span class="badge-arch">32B</span></h3>
                     <p>Versão super leve do Delta para arquitetura 32Bits. Ideal para dispositivos mais antigos.</p>
                     <a href="https://www.mediafire.com/file/as50rhwu5q2m6ry/Delta_Super_Lite_V724_32B.apk/file?dkey=pmmn9wpsvzf&r=985" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
@@ -487,7 +489,6 @@
 
                 <!-- ECLIPSE -->
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Eclipse Executor" loading="lazy" />
                     <h3>Eclipse <span class="badge-arch">1.0.9</span></h3>
                     <p>Executor Eclipse com suporte otimizado para scripts e desempenho robusto.</p>
                     <a href="https://www.mediafire.com/file/aajtor2rgi1rm8h/Eclipse_1.0.9.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
@@ -496,32 +497,43 @@
             </div>
         </section>
 
-        <!-- SEÇÃO VNG EDITION -->
-        <section id="vng" class="section">
+        <!-- SEÇÃO PC -->
+        <section id="pc" class="section">
             <div class="grid">
 
-                <!-- DELTA VNG LITE 64B -->
-                <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/7Opz5w7.png" alt="Delta VNG Lite" loading="lazy" />
-                    <h3 style="color: #00ff9d;">Delta VNG Lite 64Bits <span class="badge-arch vng-badge">Vietnam</span><span class="updated-badge">UPDATED</span></h3>
-                    <p>Versão leve oficial Vietnam do Delta para arquitetura 64Bits. Otimizado para servidores asiáticos.</p>
-                    <a href="https://biplap3.hubsocial.chat/?p=893" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                <!-- FLUXUZ WINDOWS -->
+                <div class="cyber-card pc-card">
+                    <h3 style="color: #ff8800;">FluxuzZ <span class="badge-arch pc-badge">WINDOWS</span></h3>
+                    <p>Executor FluxuzZ para Windows. Versão 1.1.6 com performance aprimorada para PC.</p>
+                    <a href="https://www.mediafire.com/file/u8o5jwj8reaetbk/FluxusZ_Windows_1.1.6_25789050.exe/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
-                <!-- ARCEUS X NEO VNG 64B -->
-                <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/G5ugGmp.png" alt="Arceus X NEO VNG" loading="lazy" />
-                    <h3 style="color: #00ff9d;">Arceus X NEO VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão Vietnam do Arceus X NEO para arquitetura 64Bits. Compatível com servidores asiáticos.</p>
-                    <a href="https://www.mediafire.com/file/8d1qrhckssh9ult/Arceus_x_vng_neo.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                <!-- VELOCITY WINDOWS -->
+                <div class="cyber-card pc-card">
+                    <h3 style="color: #ff8800;">Velocity <span class="badge-arch pc-badge">WINDOWS</span></h3>
+                    <p>Executor Velocity para Windows com suporte completo a scripts avançados.</p>
+                    <a href="https://www.mediafire.com/file/v7gc34fanrt5w7b/Velocity.zip/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
-                <!-- ROBLOX VNG LITE 64B -->
-                <div class="cyber-card vng-card">
-                    <img src="https://i.imgur.com/TEYdM8i.png" alt="Roblox VNG Lite" loading="lazy" />
-                    <h3 style="color: #00ff9d;">Roblox VNG Super Lite 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
-                    <p>Versão super leve do Roblox VNG para arquitetura 64Bits. Ideal para dispositivos com menos recursos.</p>
-                    <a href="https://www.mediafire.com/file/h4e8b45zqag6x0z/ROBLOX_VNG_SUPER_LITE_64B.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                <!-- NEXOMIA PC -->
+                <div class="cyber-card pc-card">
+                    <h3 style="color: #ff8800;">Nexomia <span class="badge-arch pc-badge">WINDOWS</span><span class="updated-badge">UPDATED</span></h3>
+                    <p>Executor Nexomia para PC com suporte avançado e performance otimizada.</p>
+                    <a href="https://biplap3.hubsocial.chat/?p=1007" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- MADIUM PC -->
+                <div class="cyber-card pc-card">
+                    <h3 style="color: #ff8800;">Madium <span class="badge-arch pc-badge">WINDOWS</span><span class="updated-badge">UPDATED</span></h3>
+                    <p>Executor Madium para PC com interface moderna e recursos completos.</p>
+                    <a href="https://biplap3.hubsocial.chat/?p=1010" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- XENOM PC -->
+                <div class="cyber-card pc-card">
+                    <h3 style="color: #ff8800;">Xenom <span class="badge-arch pc-badge">WINDOWS</span><span class="updated-badge">UPDATED</span></h3>
+                    <p>Executor Xenom para PC com estabilidade e suporte a scripts avançados.</p>
+                    <a href="https://biplap3.hubsocial.chat/?p=1013" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
             </div>
@@ -533,18 +545,44 @@
 
                 <!-- DELTA iOS -->
                 <div class="cyber-card ios-card">
-                    <img src="https://i.imgur.com/K1YVVbH.png" alt="Delta iOS" loading="lazy" />
-                    <h3 style="color: #ffffff;">Delta iOS <span class="badge-arch ios-badge">IPA</span></h3>
+                    <h3 style="color: #ffffff;">Delta iOS <span class="badge-arch ios-badge">IPA</span><span class="updated-badge">UPDATED</span></h3>
                     <p>Executor Delta para dispositivos iOS.</p>
-                    <a href="https://mobile2.hubsocial.chat/?p=523" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                    <a href="https://biplap3.hubsocial.chat/?p=1004" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
                 <!-- RONIX iOS -->
                 <div class="cyber-card ios-card">
-                    <img src="https://i.imgur.com/D48xTEr.png" alt="Ronix iOS" loading="lazy" />
                     <h3 style="color: #ffffff;">Ronix iOS <span class="badge-arch ios-badge">IPA</span></h3>
                     <p>Executor Ronix para dispositivos iOS.</p>
                     <a href="https://mobile2.hubsocial.chat/?p=508" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO VNG EDITION -->
+        <section id="vng" class="section">
+            <div class="grid">
+
+                <!-- DELTA VNG LITE 64B -->
+                <div class="cyber-card vng-card">
+                    <h3 style="color: #00ff9d;">Delta VNG Lite 64Bits <span class="badge-arch vng-badge">Vietnam</span><span class="updated-badge">UPDATED</span></h3>
+                    <p>Versão leve oficial Vietnam do Delta para arquitetura 64Bits. Otimizado para servidores asiáticos.</p>
+                    <a href="https://biplap3.hubsocial.chat/?p=893" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- ARCEUS X NEO VNG 64B -->
+                <div class="cyber-card vng-card">
+                    <h3 style="color: #00ff9d;">Arceus X NEO VNG 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão Vietnam do Arceus X NEO para arquitetura 64Bits. Compatível com servidores asiáticos.</p>
+                    <a href="https://www.mediafire.com/file/8d1qrhckssh9ult/Arceus_x_vng_neo.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
+                </div>
+
+                <!-- ROBLOX VNG LITE 64B -->
+                <div class="cyber-card vng-card">
+                    <h3 style="color: #00ff9d;">Roblox VNG Super Lite 64Bits <span class="badge-arch vng-badge">Vietnam</span></h3>
+                    <p>Versão super leve do Roblox VNG para arquitetura 64Bits. Ideal para dispositivos com menos recursos.</p>
+                    <a href="https://www.mediafire.com/file/h4e8b45zqag6x0z/ROBLOX_VNG_SUPER_LITE_64B.apk/file" class="download-btn" target="_blank">INICIAR DOWNLOAD</a>
                 </div>
 
             </div>
@@ -554,19 +592,16 @@
         <section id="scripts" class="section">
             <div class="grid">
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/UNdzjUW.png" alt="Script Blox Fruits" loading="lazy" />
                     <h3>Script Blox Fruits</h3>
                     <p>Auto farm, teleportes e muito mais para dominar o jogo.</p>
                     <a href="https://pastebin.com/uXg7t1JY" class="download-btn" target="_blank">COPIAR DATA</a>
                 </div>
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/zhMd46O.png" alt="Arsenal Aimbot" loading="lazy" />
                     <h3>Script Arsenal AimBot</h3>
                     <p>Melhore sua mira e domine o campo de batalha.</p>
                     <a href="https://pastebin.com/sHdm8NyG" class="download-btn" target="_blank">COPIAR DATA</a>
                 </div>
                 <div class="cyber-card">
-                    <img src="https://i.imgur.com/wIsqE64.png" alt="Dead Rails Script" loading="lazy" />
                     <h3>Script Dead Rails</h3>
                     <p>Script funcional com funções de auto kill, speed e mais.</p>
                     <a href="https://pastebin.com/7EbLDRNi" class="download-btn" target="_blank">COPIAR DATA</a>
@@ -584,7 +619,7 @@
     <script>
         function showTab(e, id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.cyber-btn, .vng-btn, .ios-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.cyber-btn, .vng-btn, .ios-btn, .pc-btn').forEach(b => b.classList.remove('active'));
             document.getElementById(id).classList.add('active');
             e.currentTarget.classList.add('active');
         }
